@@ -18,15 +18,13 @@ company_names = ['PD','ZUO','PINS','ZM','PVTL','DOCU','CLDR','RUN',]
 
 def start(company_names):
 
-    for i, company_name in enumerate(company_names):
+    for company_name in company_names:
         company_name = company_name.strip()
 
         download_news(company_name)
 
         if download_data(company_name) != False:
             add_3day_before_change_column(company_name)
-        else:
-            start(company_names[i + 1:])
 
 
 if __name__ == "__main__":
