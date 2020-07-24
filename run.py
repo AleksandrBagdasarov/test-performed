@@ -2,7 +2,7 @@
 This assignment tests my skills when applying for a job.
 The application collects some data from finance.yahoo.com.
 For the application to work correctly, you need google chrome
-change the settings of the selenium module in the file
+or change the settings of the selenium module in the file
 "download_news.py"
 line 5, 6, 15, 16, 17
 '''
