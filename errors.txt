@@ -1,7 +1,0 @@
-
-2020-07-24 11:20:52 -> PVTL
-Traceback (most recent call last):
-  File "c:\Users\Aleksander\Documents\Py Projects\env\Include\test\scrap_yahoo\download_data.py", line 16, in _get_first_trade_in_seconds
-    first_trade_date_in_seconds = (json_response['quoteResponse']['result'][-1]['firstTradeDateMilliseconds']) // 1000
-IndexError: list index out of range
-Something is wrong, make sure the company name is correct and there is historical data for it.

@@ -13,8 +13,8 @@ from scrap_yahoo.add_3day_before_change_column import add_3day_before_change_col
 
 
 tab = '\n'
-# company_names = input(f'{tab * 10}Enter The Name Separated By "," :').upper().replace('  ', ' ').split(',')
-company_names = ['PD','ZUO','PINS','ZM','PVTL','DOCU','CLDR','RUN',]
+company_names = input(f'{tab * 10}Enter The Name Separated By "," :').upper().replace('  ', ' ').split(',')
+# company_names = ['PD','ZUO','PINS','ZM','PVTL','DOCU','CLDR','RUN',]
 
 def start(company_names):
 

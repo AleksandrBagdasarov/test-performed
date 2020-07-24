@@ -19,26 +19,21 @@ def _calculate_new_column(company_name):
             try:
                 date_key = datetime.datetime.strptime(row['Date'].replace('-',''), '%Y%m%d').date() - three_days
                 date_and_close_values_from_file[row['Date']] = row['Close']
+
                 if str(date_key) in date_and_close_values_from_file:
                     _3day_before_change = float(row['Close']) / float(date_and_close_values_from_file[str(date_key)])
-                    data_from_file.append({'Date': row['Date'],
-                                            'Open': row['Open'],
-                                            'High': row['High'],
-                                            'Low': row['Low'],
-                                            'Close': row['Close'],
-                                            'Adj Close': row['Adj Close'],
-                                            'Volume': row['Volume'],
-                                            '3day_before_change': _3day_before_change,})
+
                 else:
                     _3day_before_change = '-'
-                    data_from_file.append({'Date': row['Date'],
-                                            'Open': row['Open'],
-                                            'High': row['High'],
-                                            'Low': row['Low'],
-                                            'Close': row['Close'],
-                                            'Adj Close': row['Adj Close'],
-                                            'Volume': row['Volume'],
-                                            '3day_before_change': _3day_before_change,})
+                
+                data_from_file.append({'Date': row['Date'],
+                                        'Open': row['Open'],
+                                        'High': row['High'],
+                                        'Low': row['Low'],
+                                        'Close': row['Close'],
+                                        'Adj Close': row['Adj Close'],
+                                        'Volume': row['Volume'],
+                                        '3day_before_change': _3day_before_change,})
             except Exception:
                 with open('errors.txt', 'a') as errors_file:
                     errors_file.write(f'\n\n{company_name}\n{traceback.format_exc()}')
