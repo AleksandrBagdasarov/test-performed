@@ -12,8 +12,7 @@ from scrap_yahoo.download_news import download_news
 from scrap_yahoo.add_3day_before_change_column import add_3day_before_change_column
 
 
-space = '\n'
-# company_names = input(f'{space * 10}Enter The Name Separated By "," :').upper().replace('  ', ' ').split(',')
+# company_names = input(f'{'\n' * 10}Enter The Name Separated By "," :').upper().replace('  ', ' ').split(',')
 company_names = ['PD','ZUO','PINS','ZM','PVTL','DOCU','CLDR','RUN',]
 
 def start(company_names):
